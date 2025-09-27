@@ -21,9 +21,44 @@
     - [Componentes do Workers](workers.md#componentes-do-workers)
       - [Kubelet](workers.md#kubelet)
       - [Kube Proxy](workers.md#kube-proxy)
+  - [Cluster](clusters.md#cluster)
+    - [Criando um cluster na máquina local](clusters.md#criando-um-cluster-na-máquina-local)
+    - [Criação do cluster pelo arquivo .yaml](clusters.md#criação-do-cluster-pelo-arquivo-.yaml)
+    - [Deletando um cluster na máquina local](clusters.md#deletando-um-cluster-na-máquina-local)
+    - [Criando o cluster multinode](clusters.md#criando-o-cluster-multinode)
+    - [Modelo de criação de um cluster](clusters.md#modelo-de-criação-de-uma-cluster)
+  - [Nodes(nós)](nodes.md#nodes(nós))
+    - [Listando os Nodes(Nós)](nodes.md#listando-os-nodes(nós))
   - [Pod](pods.md#pod)
-  - [Deployment](pods.md#deployment)
+    - [Criando um Pod](pods.md#criando-um-pod)
+    - [Listando Pods em execução](pods.md#listando-pods-em-execução)
+    - [Acessando um Pod](pods.md#acessando-um-pod)
+    - [Executando comandos em um Pod](pods.md#executando-comandos-em-um-pod)
+    - [Listando informações do Pod](pods.md#listando-informações-do-pod)
+    - [Logs do Pod](pods.md#logs-do-pod)
+    - [Removendo Pods](pods.md#removendo-pods)
+  - [Deployment](deployment.md#deployment)
+    - [Criando um Deployment](deployment.md#criando-um-deployment)
+    - [Listando Deployment](deployment.md#listando-deployment)
+    - [Listando detalhes do Deployment](deployment.md#listando-detalhes-do-deployment)
+    - [Exibindo as atualizações](deployment.md#exibindo-as-atualizações)
+    - [Desfazendo alterações](deployment.md#desfazendo-alterações)
+    - [Escalando por linha de comando](deployment.md#escalando-o-deploymentdesfazendo-alterações)
+    - [Desfazendo alterações](deployment.md#desfazendo-alterações)
+    - [Removendo Deployments](deployment.md#removendo-deployments)
+  - [Estratégias](strategies.md#strategies)
+    - [RollingUpdate](strategies.md#rollingupdate)
+    - [Recreate](strategies.md#recreate)
+  - [ReplicaSet](replicaset.md#replicaset)
+    - [Criando um ReplicaSet](replicaset.md#criando-um-replicaset)
+    - [Listando os ReplicaSet](replicaset.md#listando-os-replicaSet)
+    - [Detalhes do ReplicaSet](replicaset.md#detalhes-do-replicaSet)
+    - [Removendo um ReplicaSet](replicaset.md#removendo-um-replicaset)
   - [Services](services.md#services)
+  - [Namespaces](namespaces.md#namespaces)
+    - [Listando Namespaces](namespaces.md#listando-namespaces)
+    - [Criando Namespaces](namespaces.md#criando-namespaces)
+
 
   - [Ferramentas]()
     - [Kind](ferramentas/kind.md#kind)
@@ -33,26 +68,3 @@
     - [Minikube](ferramentas/minikube.md#minikube)
       - [Instalação](ferramentas/minikube.md#instalação)
       - [Inicializando o Cluster](ferramentas/minikube.md#inicializando-o-cluster)
-      
-
-      
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-
-
-  
-  

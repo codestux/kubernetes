@@ -35,15 +35,15 @@ Mapeia o Service para o conteúdo do campo ExternalName, exemplo, codestream.com
 Para criar um serviço pela linha de comando digitamos o comando abaixo.
 
 ```
-kubectl expose pods giropops
+kubectl expose pods tux
 
-kubectl expose deployment giropops --type NodePort
+kubectl expose deployment tux --type NodePort
 ```
 
 Podemos criar um serviço baseado em outro serviço com o comando abaixo.
 
 ```
-kubectl expose services --name test pods giropops
+kubectl expose services --name test pods tux
 ```
 
 O expose informa que queremos expor o componente.
@@ -101,5 +101,5 @@ O parâmetro -A realiza a busca independente de namespace
 Para remover um serviço usamos o comando abaixo.
 
 ```
-kubectl delete service giropops
+kubectl delete service tux
 ```

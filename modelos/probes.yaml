@@ -1,0 +1,58 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: nginx-deployment
+  name: nginx-deployment
+  namespace: tux
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: nginx-deployment
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  template:
+    metadata:
+      labels:
+        app: nginx-deployment
+    spec:
+      containers:
+        - image: nginx:1.15.0
+          name: nginx
+          resources:
+            limits:
+              cpu: "0.7"
+              memory: 80Mi
+          livenessProbe:
+            tcpSocket:
+              port: 80
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 3
+            successThreshold: 3
+          readinessProbe:
+            exec:
+              command:
+                - curl
+                - -f
+                - http://localhost:80/
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 3
+            successThreshold: 3
+          startupProbe:
+            tcpSocket:
+              port: 80
+            initialDelaySeconds: 30
+            timeoutSeconds: 5
+            failureThreshold: 3
+            successThreshold: 3
