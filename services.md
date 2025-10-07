@@ -82,6 +82,8 @@ kubectl describe services service-name
 
 ```bash
 kubectl get endpoints
+
+kubectl get endpointslice
 ```
 
 ## Headless Service
